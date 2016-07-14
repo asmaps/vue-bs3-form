@@ -1,0 +1,29 @@
+{
+  "name": "vue-bs3-form",
+  "version": "0.0.1",
+  "description": "Bootstrap 3 form components for Vue.js",
+  "main": "./src/main.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmaps/vue-bs3-form.git"
+  },
+  "author": "Arne Schauf <github@as-webservices.de>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/asmaps/vue-bs3-form/issues"
+  },
+  "homepage": "https://github.com/asmaps/vue-bs3-form#readme",
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "vue-select": "^1.3.2"
+  }
+}
