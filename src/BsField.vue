@@ -2,7 +2,7 @@
   <div class="form-group" :class="{'has-error': errors}">
     <label :class="labelClass" :for="name" v-if="label">{{ label }}</label>
     <div :class="inputWrapperClass">
-      <vue-select v-if="choices" :options="choices">
+      <vue-select v-if="choices" :options="choices" label="display_name" :on-change="choiceChanged">
       </vue-select>
       <input :class="{'form-control': type != 'checkbox'}" :placeholder="placeholder" :type="inputType" :id="name" @key.enter="$dispatch('bs-form.trigger-submit')" v-model="value" v-else>
       <p class="help-block" v-for="error in errors">{{ error }}</p>
@@ -55,6 +55,9 @@
       sendValue () {
         this.$dispatch('bs-field.value-changed', {name: this.name, value: this.value})
       },
+      choiceChanged (val) {
+        this.value = val.value
+      },
     },
     computed: {
       labelClass () {
@@ -72,7 +75,7 @@
       inputType () {
         if(this.type == 'integer') return 'number'
         return this.type
-      }
+      },
     }
   }
 </script>
